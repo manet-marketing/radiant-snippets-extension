@@ -61,7 +61,7 @@ class SnippetsExtension < Radiant::Extension
     admin.snippet       ||= Radiant::AdminUI.load_default_snippet_regions
     admin.snippet_file  ||= Radiant::AdminUI.load_default_snippet_file_regions
     
-    UserActionObserver.instance.send :add_observer!, ::Snippet
+    Radiant::UserActionObserver.instance.send :add_observer!, ::Snippet
                                  
     tab 'Design' do
       add_item "Snippets", "/admin/snippets"

@@ -1,4 +1,4 @@
-class Admin::SnippetFilesController < Admin::ResourceController
+class Admin::SnippetFilesController < Radiant::Admin::ResourceController
   def show;end
   private
   def load_models

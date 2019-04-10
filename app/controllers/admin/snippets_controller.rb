@@ -1,4 +1,4 @@
-class Admin::SnippetsController < Admin::ResourceController
+class Admin::SnippetsController < Radiant::Admin::ResourceController
   paginate_models
   only_allow_access_to :index, :show, :new, :create, :edit, :update, :remove, :destroy,
     :when => [:designer, :admin],
